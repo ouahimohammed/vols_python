@@ -33,9 +33,59 @@ Ce projet permet de récupérer des données de vols depuis une API, de les stoc
 
 ## 📂 Structure du projet
 
-- `main.py` : Script principal pour exécuter les fonctionnalités.
-- `requirements.txt` : Liste des dépendances Python.
-- `README.md` : Documentation du projet.
+GETION_VOLS/
+├── pycache/
+├── db/
+│ ├── pycache/
+│ └── database.py
+├── services/
+│ ├── pycache/
+│ └── flights_service.py
+├── utils/
+│ ├── pycache/
+│ └── api_client.py
+├── app.py
+├── config.py
+README.md
+
+### **Description des dossiers et fichiers :**
+
+- **`GETION_VOLS/`** : Dossier principal du projet.
+  - **`db/`** : Contient les fichiers liés à la base de données.
+    - **`database.py`** : Gère la connexion à MongoDB et les opérations de base de données.
+  - **`services/`** : Contient les services métiers.
+    - **`flights_service.py`** : Implémente les fonctionnalités liées aux vols.
+  - **`utils/`** : Contient les utilitaires.
+    - **`api_client.py`** : Gère les appels à l'API externe.
+  - **`app.py`** : Point d'entrée de l'application.
+  - **`config.py`** : Contient les configurations du projet (comme les clés API, les URLs, etc.).
+
+- **`README.md`** : Documentation du projet.
+- **`requirements.txt`** : Liste des dépendances Python.
+
+---
+
+## 🚀 Comment démarrer
+
+1. **Installer les dépendances** :
+   ```bash
+   pip install -r requirements.txt
+   Démarrer MongoDB :
+Assurez-vous que MongoDB est installé et en cours d'exécution.
+
+Exécuter le script :
+python GETION_VOLS/app.py
+📝 Exemples d'utilisation
+Récupérer et stocker les vols :
+fetch_and_store_vols()
+Afficher tous les vols :
+fetch_vols()
+search_vols_by_date("2023-10-15")
+Trier les vols par date décroissante :
+sort_vols_by_date_desc()
+🙏 Remerciements
+Merci d'utiliser ce projet ! N'hésitez pas à contribuer ou à signaler des problèmes. 😊
+
 
 ---
 
